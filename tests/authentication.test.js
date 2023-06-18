@@ -27,7 +27,7 @@ describe('Authentication', () => {
     refreshToken = response.body.refreshToken;
   });
 
-  test('should return user profile', async () => {
+  it('should return user profile', async () => {
     const response = await request(app)
       .get('/profile')
       .set('Authorization', `Bearer ${accessToken}`);
@@ -36,7 +36,7 @@ describe('Authentication', () => {
     expect(response.body.username).toBe('testuser');
   });
 
-  test('should logout a user', async () => {
+  it('should logout a user', async () => {
     const response = await request(app)
       .post('/logout')
       .set('Authorization', `Bearer ${accessToken}`)
@@ -58,7 +58,7 @@ describe('Authorization', () => {
     accessToken = response.body.accessToken;
   });
 
-  test('should return all users for moderator', async () => {
+  it('should return all users for moderator', async () => {
     const response = await request(app)
       .get('/users')
       .set('Authorization', `Bearer ${accessToken}`);
@@ -67,7 +67,7 @@ describe('Authorization', () => {
     expect(Array.isArray(response.body)).toBe(true);
   });
 
-  test('should return unauthorized for non-moderator', async () => {
+  it('should return unauthorized for non-moderator', async () => {
     const response = await request(app)
       .get('/users')
       .set('Authorization', `Bearer ${accessToken}`); // Using the same access token for non-moderator user
