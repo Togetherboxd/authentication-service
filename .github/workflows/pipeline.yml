@@ -70,6 +70,22 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+
+      - name: Install Testing Dependencies
+        run: npm install --save-dev mocha supertest
+
+      - name: Run Tests
+        run: npm test
+        env:
+          CI: true
+      
+      - name: Display Test Results
+        run: |
+          if [ $? -eq 0 ]; then
+            echo "Tests passed!"
+          else
+            echo "Tests failed!"
+          fi
   
   # Test the key
       - name: Debug API Key
