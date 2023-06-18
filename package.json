@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "mocha test/*.js"
+    "test": "mocha tests/authentication.test.js"
   },
   "dependencies": {
     "amqplib": "^0.10.3",
