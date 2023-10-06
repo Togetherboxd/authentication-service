@@ -98,7 +98,7 @@ jobs:
           gcloud auth configure-docker europe-west4-docker.pkg.dev
       - name: Build Docker Image
         run:
-          docker build -t europe-west4-docker.pkg.dev/togetherboxd-389917/auth-repo/service-authentication:${{ github.sha }} .
+          docker build -t europe-west4-docker.pkg.dev/tboxd-399816/auth-repo/auth-app:${{ github.sha }} .
 
   # Snyk vulnerability scan
       - uses: snyk/actions/setup@master
@@ -113,11 +113,11 @@ jobs:
 
       - name: Push Image to Registry
         run:
-          docker push europe-west4-docker.pkg.dev/togetherboxd-389917/auth-repo/service-authentication:${{ github.sha }}
+          docker push europe-west4-docker.pkg.dev/tboxd-399816/auth-repo/auth-app:${{ github.sha }}
 
       - name: Deploy to GKE Cluster
         run: |
           gcloud components install gke-gcloud-auth-plugin
-          gcloud container clusters get-credentials togetherboxd-cluster --zone europe-west4
+          gcloud container clusters get-credentials tboxd-cluster --zone europe-west4
           sleep 5s
-          kubectl set image deployment/service-authentication service-authentication=europe-west4-docker.pkg.dev/togetherboxd-389917/auth-repo/service-authentication:${{ github.sha }}
+          kubectl set image deployment/auth-app auth-app=europe-west4-docker.pkg.dev/tboxd-399816/auth-repo/auth-app:${{ github.sha }}
