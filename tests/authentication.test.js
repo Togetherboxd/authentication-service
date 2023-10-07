@@ -5,7 +5,7 @@ describe('Authentication', () => {
   let accessToken;
   let refreshToken;
 
-  test('should register a new user', async () => {
+  it('should register a new user', async () => {
     const response = await request(app)
       .post('/register')
       .send({ username: 'testuser', password: 'password', isModerator: false, consent: true });
@@ -14,7 +14,7 @@ describe('Authentication', () => {
     expect(response.body).toBe('By registering you agree to let us store your data. USER WITH USERNAME testuser REGISTERED');
   });
 
-  test('should login a user', async () => {
+  it('should login a user', async () => {
     const response = await request(app)
       .post('/login')
       .send({ username: 'testuser', password: 'password' });
