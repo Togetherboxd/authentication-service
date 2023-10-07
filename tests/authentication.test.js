@@ -50,7 +50,7 @@ describe('Authentication', () => {
 describe('Authorization', () => {
   let accessToken;
 
-  beforeAll(async () => {
+  before(async () => {
     const response = await request(app)
       .post('/login')
       .send({ username: 'admin', password: 'adminpassword' });
