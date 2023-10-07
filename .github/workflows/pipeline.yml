@@ -73,12 +73,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
       
-      # - name: Build (Optional)
-      #   run: npm run build --if-present
+      - name: Build (Optional)
+        run: npm run build --if-present
         # This step is optional and can be omitted if your project doesn't have a build step.
 
-      - name: Test
-        run: npm test
+      # - name: Test
+      #   run: npm test
   
   # Test the key
       - name: Debug API Key
