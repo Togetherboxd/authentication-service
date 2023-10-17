@@ -73,6 +73,7 @@ jobs:
       - name: Run Load Test
         run: |
           export PATH=$PATH:$PWD/apache-jmeter-5.5/bin
+          cd /authentication-service/load-tests  # Navigate to the directory with the JMX file
           jmeter -n -t testplan.jmx -l testresults.jtl
 
       - name: Upload test results
