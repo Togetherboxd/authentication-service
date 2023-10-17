@@ -57,8 +57,8 @@ app.post("/register", (req, res, next) => {
 });
 
 
-function generateAccessToken(user) {
-  return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '300s' });
+function generateAccessToken(username) {
+  return jwt.sign({ username }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '300s' });
 }
 
 function authenticateToken(req, res, next) {
@@ -109,8 +109,8 @@ app.post("/login", async (req, res) => {
         .status(400)
         .json({ error: "Wrong Username and Password Combination!" });
     } else {
-      const accessToken = generateAccessToken(user.toJSON());
-      const refreshToken = jwt.sign(user.toJSON(), process.env.REFRESH_TOKEN_SECRET);
+      const accessToken = generateAccessToken(username);
+      const refreshToken = jwt.sign({username}, process.env.REFRESH_TOKEN_SECRET);
 
       refreshTokens.push(refreshToken);
 

@@ -1,0 +1,21 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1697559496737,13,HTTP Request,500,Internal Server Error,Thread Group 1-1,text,false,,562,242,1,1,http://localhost:3003/authentication/login,13,0,4
+1697559497239,5,HTTP Request,500,Internal Server Error,Thread Group 1-2,text,false,,562,242,1,1,http://localhost:3003/authentication/login,5,0,1
+1697559497741,9,HTTP Request,500,Internal Server Error,Thread Group 1-3,text,false,,562,242,1,1,http://localhost:3003/authentication/login,9,0,4
+1697559498234,4,HTTP Request,500,Internal Server Error,Thread Group 1-4,text,false,,562,242,1,1,http://localhost:3003/authentication/login,4,0,2
+1697559498733,4,HTTP Request,500,Internal Server Error,Thread Group 1-5,text,false,,562,242,1,1,http://localhost:3003/authentication/login,4,0,1
+1697559499233,4,HTTP Request,500,Internal Server Error,Thread Group 1-6,text,false,,562,242,1,1,http://localhost:3003/authentication/login,4,0,1
+1697559499732,5,HTTP Request,500,Internal Server Error,Thread Group 1-7,text,false,,562,242,1,1,http://localhost:3003/authentication/login,5,0,2
+1697559500241,3,HTTP Request,500,Internal Server Error,Thread Group 1-8,text,false,,562,242,1,1,http://localhost:3003/authentication/login,3,0,1
+1697559500740,5,HTTP Request,500,Internal Server Error,Thread Group 1-9,text,false,,562,242,1,1,http://localhost:3003/authentication/login,4,0,1
+1697559501232,5,HTTP Request,500,Internal Server Error,Thread Group 1-10,text,false,,562,242,1,1,http://localhost:3003/authentication/login,5,0,2
+1697559501732,4,HTTP Request,500,Internal Server Error,Thread Group 1-11,text,false,,562,242,1,1,http://localhost:3003/authentication/login,4,0,1
+1697559502235,5,HTTP Request,500,Internal Server Error,Thread Group 1-12,text,false,,562,242,1,1,http://localhost:3003/authentication/login,5,0,2
+1697559502732,5,HTTP Request,500,Internal Server Error,Thread Group 1-13,text,false,,562,242,1,1,http://localhost:3003/authentication/login,5,0,1
+1697559503234,4,HTTP Request,500,Internal Server Error,Thread Group 1-14,text,false,,562,242,1,1,http://localhost:3003/authentication/login,4,0,1
+1697559503732,5,HTTP Request,500,Internal Server Error,Thread Group 1-15,text,false,,562,242,1,1,http://localhost:3003/authentication/login,5,0,1
+1697559504233,4,HTTP Request,500,Internal Server Error,Thread Group 1-16,text,false,,562,242,1,1,http://localhost:3003/authentication/login,4,0,1
+1697559504749,11,HTTP Request,500,Internal Server Error,Thread Group 1-17,text,false,,562,242,1,1,http://localhost:3003/authentication/login,11,0,3
+1697559505234,7,HTTP Request,500,Internal Server Error,Thread Group 1-18,text,false,,562,242,1,1,http://localhost:3003/authentication/login,7,0,2
+1697559505734,5,HTTP Request,500,Internal Server Error,Thread Group 1-19,text,false,,562,242,1,1,http://localhost:3003/authentication/login,5,0,1
+1697559506233,4,HTTP Request,500,Internal Server Error,Thread Group 1-20,text,false,,562,242,1,1,http://localhost:3003/authentication/login,4,0,1
