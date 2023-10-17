@@ -6,7 +6,6 @@ on:
       - main
 
 jobs:
-  
   build:
     name: Setup, Publish, and Deploy
     runs-on: ubuntu-latest
