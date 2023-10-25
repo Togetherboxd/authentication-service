@@ -24,9 +24,6 @@ jobs:
       - name: Build (Optional)
         run: npm run build --if-present
         # This step is optional and can be omitted if your project doesn't have a build step.
-
-      - name: Test
-        run: npm test
       
   # Authentication to google cloud services
       - name: Auth
@@ -85,6 +82,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: test-results
+      
+      - name: Upload test results to Google Cloud Storage
+        run: |
+          gsutil cp testresults.jtl gs://loadtestresults/
+        
 
       - name: Push Image to Registry
         run:

@@ -17,7 +17,7 @@
     "username": "root",
     "password": null,
     "database": "authdb",
-    "host": "199.27.25.0",
+    "host": "34.90.15.155",
     "dialect": "mysql"
   }
 }
