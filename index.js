@@ -164,6 +164,15 @@ app.get("/users", authenticateToken, (req, res) => {
   }
 });
 
+app.get('/allUsers', (req, res) => {
+  Users.findAll()
+    .then((users) => {
+      res.json(users);
+    })
+    .catch((err) => {
+      res.status(500).json({ error: 'Failed to fetch users' });
+    });
+});
 
 db.sequelize.sync().then(() => {
   app.listen(3001, () => {
